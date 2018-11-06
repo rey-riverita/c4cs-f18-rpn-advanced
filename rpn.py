@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import operator
-import colored 
+import colored
 
 op = {
 	'+': operator.add,
@@ -32,8 +32,15 @@ def calculate(arg):
 
 def main():
 	while True:
-		result = calculate(input('rpn calc> ')) 
-		print('%s%s ' + str(result) + ' %s' % (colored.fg('white'), colored.bg('yellow'), colored.attr('reset')))
+		result = calculate(input('rpn calc> '))
+		if result < 0: # negative number
+			print('%s %d %s' % (colored.fg('red'), result, colored.attr('bold')))
+		elif result % 2: # odd number
+			print('%s%s %d %s' % (colored.fg('white'), colored.bg('yellow'), result, colored.attr('reset')))
+		elif not result % 2: # even number
+			print('%s%s %d %s' % (colored.fg('white'), colored.bg('blue'), result, colored.attr('reset')))
+
+
 
 
 if __name__ == '__main__':
