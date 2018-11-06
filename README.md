@@ -1,2 +1,2 @@
 # c4cs-f18-rpn-advanced
-branch=master
+https://travis-ci.org/rey-riverita/c4cs-f18-rpn-advanced.svg?branch=master
